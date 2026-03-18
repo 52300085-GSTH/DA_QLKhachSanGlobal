@@ -1,0 +1,11 @@
+# Chặn thư mục node_modules ở mọi nơi
+node_modules/
+
+# Nếu bạn dùng Next.js (thấy có thư mục .next trong ảnh)
+.next/
+
+# Các file môi trường bí mật
+.env*
+
+# Các file rác của hệ thống
+DS_Store
