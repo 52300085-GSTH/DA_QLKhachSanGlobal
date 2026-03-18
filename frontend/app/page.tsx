@@ -1,0 +1,9 @@
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-gray-50">
+      <h1 className="text-4xl font-bold text-center py-10 text-indigo-600">
+        Global Hotel Dashboard
+      </h1>
+    </main>
+  );
+}
