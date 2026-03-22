@@ -43,3 +43,11 @@ CREATE TRIGGER trg_rate_audit
 AFTER UPDATE OF Rate ON Rooms
 FOR EACH ROW
 EXECUTE FUNCTION func_check_rate_change();
+
+
+ALTER TABLE Rooms ADD CONSTRAINT chk_status CHECK (Status IN ('AVAILABLE', 'BOOKED', 'MAINTENANCE'));
+
+-- Bổ sung thông tin thời gian vào Bookings để tính doanh thu theo Quý (Quarter)
+ALTER TABLE Bookings ADD COLUMN CheckInDate DATE;
+ALTER TABLE Bookings ADD COLUMN CheckOutDate DATE;
+ALTER TABLE Bookings ADD COLUMN TotalPrice DECIMAL(10, 2);
